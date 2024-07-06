@@ -1,0 +1,21 @@
+Source : JavaTpoint GeeksforGeeks
+
+nltk:
+python programming environment. It includes language processing libraries for 
+tokenization, parsing, classification, stemming, labeling, and semantic reasoning
+
+    Featutes:
+    1.Morphological processing: Breaking down linguistic input into smaller tokens, such as splitting the term "daily" into sub-word tokens like "day" and "ly."
+    2.Syntax Analysis: Syntax analysis in NLP checks if a phrase is grammatically correct and organizes it into a structure that shows the grammatical relationships
+    3.Semantic Analysis: Assesses the meaning of text by determining its specific interpretation, such as ignoring nonsensical phrases
+    4.Pragmatic Analysis:  resolving ambiguities such as whether "Put the fruits in the basket on the table" means placing fruits in a basket that is on the table or placing the basket on the table.
+
+from nltk.corpus import stopwords
+
+In NLP, stopwords (common words like "the", "a", "an", "in") are often filtered out to enhance text analysis and computational 
+efficiency by focusing on more important content words.
+
+from nltk.stem.porter import PorterStemmer
+
+Stemming is the process of reducing words to their root form, such as converting 
+"chocolates," "chocolatey," and "choco" to "chocolate" and "retrieval," "retrieved," "retrieves" to "retrieve."

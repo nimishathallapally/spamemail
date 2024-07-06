@@ -1,0 +1,26 @@
+Sources: Tutorialspoint , GeeksforGeeks
+
+Sklearn:
+
+It provides a selection of efficient tools for machine learning and 
+statistical modeling including classification, regression, clustering 
+
+from sklearn.feature_extraction.text import CountVectorizer
+
+t is used to transform a given text into a vector on the basis of the frequency (count) of each word that occurs 
+in the entire text. This is helpful when we have multiple such texts, and we wish to convert each word in each text into vectors 
+(for using in further text analysis). 
+
+Link:https://www.geeksforgeeks.org/using-countvectorizer-to-extracting-features-from-text/
+
+
+from sklearn.model_selection import train_test_split
+
+The train_test_split() method is used to split our data into train and test sets. First, we need to divide our data into features (X) and labels (y). The dataframe gets divided into X_train, X_test, y_train, and y_test. X_train and y_train sets are used for training and fitting the model. The X_test and y_test sets are used for testing the model if it’s predicting the right outputs/labels. we can explicitly test the size of the train and test sets. 
+It is suggested to keep our train sets larger than the test sets.
+
+from sklearn.ensemble import RandomForestClassifier
+Random Forest Classificationclassification 
+accuracy and robustness by constructing multiple decision trees using diverse subsets of the training data and features, a method known as bagging (Bootstrap Aggregating). 
+Each tree is built by recursively partitioning the data based on the best feature from the random subset.Predictions are made by aggregating the "votes" from all trees, with the most voted class becoming the predicted class, 
+reducing the likelihood of overfitting and improving model performance.
