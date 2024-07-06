@@ -1,0 +1,8 @@
+Joblib module in Python is especially used to execute tasks parallelly using Pipelines rather than executing them 
+sequentially one after another. Joblib module lets the user use the full potential of their devices by utilizing 
+all the cores present in their device to make the process as fast as possible.
+
+
+The joblib.dump function is used to serialize Python objects and save them to a file. This is particularly 
+useful for saving machine learning models and other large data objects that you want to reuse later without having 
+to recompute them.

@@ -24,3 +24,7 @@ Random Forest Classificationclassification
 accuracy and robustness by constructing multiple decision trees using diverse subsets of the training data and features, a method known as bagging (Bootstrap Aggregating). 
 Each tree is built by recursively partitioning the data based on the best feature from the random subset.Predictions are made by aggregating the "votes" from all trees, with the most voted class becoming the predicted class, 
 reducing the likelihood of overfitting and improving model performance.
+
+Predict Method:
+The predict method is a built-in function provided by the RandomForestClassifier in the scikit-learn library. 
+After training a model on a dataset, the predict method is used to apply the trained model to new, unseen data to generate predictions.

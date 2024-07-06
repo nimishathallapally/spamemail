@@ -11,13 +11,15 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 
+import joblib
+
 nltk.download('stopwords')
 
-#Reading the dataset and initialising
+# Reading the dataset and initialising
 
 data_set=pd.read_csv('spam_ham_dataset.csv')
 
-#replace the new line with whitespaces using the lambda function
+# replace the new line with whitespaces using the lambda function
 data_set['text']=data_set['text'].apply(lambda x: x.replace('\r\n',' '))
 
 stemmer=PorterStemmer()
@@ -25,7 +27,7 @@ corpus=[]
 
 stopword_set=set(stopwords.words('english'))
 
-#Preprocessing and Stemming
+# Preprocessing and Stemming
 
 for i in range(len(data_set)):
 
@@ -72,4 +74,13 @@ clf.fit(x_train , y_train)
 
 accuracy=clf.score(x_test,y_test)
 
-print(accuracy)
+print(f'Model accuracy: {accuracy}')
+
+# save the vectorizer object to a file named 'vectorizer.pkl'
+joblib.dump(vectorizer, 'vectorizer.pkl')
+
+# 'clf' object (RandomClassifierObject) is saved to file named 'classifier.pkl'
+# clf is an instance of RandomForestClassifier that has been trained on your dataset. 
+# It contains the trained model parameters needed to make predictions on new data.
+
+joblib.dump(clf, 'classifier.pkl')
