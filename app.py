@@ -44,9 +44,12 @@ def classify_email(email,vectorizer,clf):
 # Initialise Flask App
 app=Flask(__name__)
 
-@app.route('/')
+# @app.route() is a decorater which specifies what function should be execeuted when a particular url is requested
 
+@app.route('/')
 def home():
+    
+    # render_template is a function that generates HTML pages by combining a template with the context provided. 
     return render_template('index.html')
 
 @app.route('/classify',methods=['POST'])
@@ -58,8 +61,9 @@ def classify():
     else:
         result="NOT SPAM"
     
+    # These values can be directly inserted in the html page
     return render_template('result.html',email=email,result=result)
 
-
+# ensures that the Flask server starts only when you run the script directly via python app.py
 if __name__ == '__main__':
     app.run(debug=True)
