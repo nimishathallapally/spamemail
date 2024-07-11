@@ -63,7 +63,7 @@ y=data_set.label_num
 # y_train: This is the subset of y corresponding to x_train, used to train the model.
 # y_test: This is the subset of y corresponding to x_test, used to evaluate the model's performance.
 
-x_train, x_test, y_train, y_test = train_test_split(x ,y ,test_size=0.2)
+x_train, x_test, y_train, y_test = train_test_split(x ,y ,test_size=0.2,random_state=42)
 
 # n_jobs=-1 is a shorthand that tells scikit-learn to use all available cores.
 clf=RandomForestClassifier(n_jobs=-1)
